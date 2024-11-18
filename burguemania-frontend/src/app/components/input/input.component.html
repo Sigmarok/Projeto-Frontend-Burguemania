@@ -1,1 +1,4 @@
-<p>input works!</p>
+<label>{{ label }}</label>
+<div class="form" [class.small]="size === 'small'" [class.medium]="size === 'medium'" [class.large]="size === 'large'">
+  <input [type]="type" [placeholder]="placeholder" required>
+</div>

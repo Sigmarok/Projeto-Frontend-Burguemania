@@ -1,0 +1,39 @@
+.form {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form input:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+  outline: none;
+}
+
+.form.small input {
+  width: 150px;
+}
+
+.form.medium input {
+  width: 300px;
+}
+
+.form.large input {
+  height: 300px;
+  width: 800px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}

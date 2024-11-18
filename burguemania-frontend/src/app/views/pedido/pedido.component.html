@@ -1,1 +1,30 @@
-<p>pedido works!</p>
+<div class="header-content">
+  <app-header></app-header>
+  <app-navbar></app-navbar>
+</div>
+<h1>Pedido</h1>
+<div class="container">
+  <div class="formulario">
+    <div *ngFor="let input of inputs" class="produtos">
+      <app-input
+        [label]="input.label"
+        [placeholder]="input.placeholder"
+        [size]="input.size"
+      ></app-input>
+    </div>
+
+    <div class="botoes">
+      <button (click)="addInput()">+</button>
+      <button (click)="deleteInput()">-</button>
+    </div>
+
+    <div class="observacao">
+      <label>Observação *</label>
+      <textarea cols="100" rows="20"></textarea>
+    </div>
+    <div class="button-container">
+      <app-button text="Finalizar"></app-button>
+    </div>
+  </div>
+</div>
+
