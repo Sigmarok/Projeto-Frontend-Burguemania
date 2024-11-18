@@ -1,0 +1,21 @@
+<header>
+  <div class="header-content">
+    <app-header></app-header>
+    <app-navbar></app-navbar>
+  </div>
+</header>
+<h1>{{ category }}</h1>
+<div class="card-container">
+  <div *ngIf="burguers.length > 0; else noItems" class="card-container">
+      <app-card
+        *ngFor="let item of burguers"
+        [imageSrc]="'../../../assets/burguer.png'"
+        [imageAlt]="item.name"
+        [title]="item.name"
+        [content]="item.ingredients"
+      ></app-card>
+  </div>
+  <ng-template #noItems>
+    <p>No items available for this category.</p>
+  </ng-template>
+</div>

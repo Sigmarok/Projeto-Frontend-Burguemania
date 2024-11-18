@@ -1,0 +1,96 @@
+
+/* Reset de estilo para uma base consistente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #521d16;
+  line-height: 1.6;
+}
+
+header {
+  flex: 1;
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+  text-align: left;
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: space-between; /* Espaça os itens igualmente */
+  width: 100%;
+}
+
+app-header {
+  flex: 1; /* Ocupará o espaço necessário */
+}
+
+app-navbar {
+  flex: 1; /* Ocupará o espaço necessário */
+  display: flex;
+  justify-content: flex-end; /* Alinha os links à direita */
+}
+
+
+/* Estrutura Principal */
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+  color: #ed0000;
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+h2 {
+  color: #521d16;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+/* Estilização do Hero */
+.hero {
+  text-align: center;
+  padding: 50px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #ed0000;
+  margin-bottom: 20px;
+}
+
+.hero img {
+  width: 80%;
+  max-width: 800px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row; /* Alinha os itens em uma linha */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha, se necessário */
+  justify-content: center; /* Alinha os itens ao centro do contêiner */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  gap: 16px; /* Espaçamento entre os cards */
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centraliza o botão horizontalmente */
+  margin-top: 20px; /* Espaçamento superior para separar do conteúdo acima */
+}

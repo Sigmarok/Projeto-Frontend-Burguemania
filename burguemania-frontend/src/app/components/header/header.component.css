@@ -1,0 +1,14 @@
+header {
+  flex: 1;
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+  text-align: left;
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: space-between; /* Espaça os itens igualmente */
+  width: 100%;
+}

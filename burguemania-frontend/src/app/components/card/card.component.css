@@ -1,0 +1,34 @@
+mat-card:hover{
+  border: 2px solid red;
+}
+mat-card {
+  width: 500px; /* Ajuste o tamanho conforme necessário */
+  height: 500px;
+  margin: 10px;
+  display: flex;
+  cursor: pointer; /* Adiciona um cursor de ponteiro para indicar que é clicável */
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+mat-card img {
+  height: 250px; /* Ajuste a altura da imagem conforme necessário */
+  object-fit: cover; /* Garante que a imagem se ajuste ao contêiner */
+
+}
+
+mat-card-title
+{
+  color: #521d16;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+mat-card::content
+{
+  color: #000000;
+  font-size: 1.6rem;
+  text-align: center;
+}

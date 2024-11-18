@@ -1,0 +1,34 @@
+<header>
+  <div class="header-content">
+    <app-header></app-header>
+    <app-navbar></app-navbar>
+  </div>
+</header>
+<h1>Cardápio</h1>
+<div class="card-container">
+  <app-card
+    imageSrc="../../../assets/burguer.png"
+    imageAlt="X-Vegan"
+    title="X-Vegan"
+    content="Matinho nham nham"
+    category="vegan"
+  ></app-card>
+
+  <app-card
+    imageSrc="../../../assets/burguer.png"
+    title="X-Fitnnes"
+    content="Pra quem gosta de algo fit"
+    category="fitness"
+  ></app-card>
+
+  <app-card
+    imageSrc="../../../assets/burguer.png"
+    imageAlt="X-Infarto"
+    title="X-Infarto"
+    content="Preenchendo o vazio no seu coração"
+    category="infarto"
+  ></app-card>
+</div>
+<div class="button-container">
+  <app-button text="Cardápio completo" route="/cardapio-comp"></app-button>
+</div>
