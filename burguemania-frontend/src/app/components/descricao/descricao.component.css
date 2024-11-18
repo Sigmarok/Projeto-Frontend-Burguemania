@@ -1,0 +1,17 @@
+.burguer-desc {
+  font: 30px sans-serif;
+  text-align: justify;
+  border: 1px solid #000;
+  width: 900px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.burguer-desc h3{
+  font: 40px sans-serif;
+  text-align: center;
+  padding-bottom: 30px;
+
+}

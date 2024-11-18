@@ -11,11 +11,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CardComponent implements OnInit {
   @Input() imageSrc: string = '';
-  @Input() imageAlt: string = '';
   @Input() title: string = '';
   @Input() content: string = '';
-  @Input() route: string = '';
   @Input() category: string = '';
+  @Input() clickable: boolean = true;
 
   currentRoute: string = '';
 

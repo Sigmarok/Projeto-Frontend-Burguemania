@@ -7,17 +7,14 @@
   <div class="burguer-details">
     <app-card
       [imageSrc]="'../../../assets/burguer.png'"
-      [imageAlt]="burger.name"
       [title]="burger.name"
       [content]="burger.ingredients"
+      [clickable]="false"
     ></app-card>
     <p class="price">Preço: {{ burger.price | currency }}</p>
   </div>
 
-  <div class="burguer-desc">
-    <h3>Detalhes</h3>
-    <p>Descrição: {{ burger.description }}</p>
-  </div>
+  <app-descricao></app-descricao>
 </div>
 <div class="button-container">
   <app-button text="Comprar" route="/pedido"></app-button>

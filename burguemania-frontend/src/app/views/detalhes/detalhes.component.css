@@ -5,6 +5,7 @@
   justify-content: center;
   margin: 20px;
 }
+
 .burguer-details h2{
   display: flex;
   align-items: center;
@@ -19,6 +20,7 @@
   justify-content: center;
   margin: 20px;
 }
+
 .price {
   font-size: 40px;
   color: #521d16;
@@ -26,19 +28,6 @@
   margin-top: 20px;
 }
 
-.burguer-desc {
-  font: 30px sans-serif;
-  text-align: justify;
-  border: 1px solid #000;
-  width: 900px;
-  padding: 15px;
-  margin: 20px;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.burguer-desc h3{
-  font: 60px sans-serif;
-  text-align: center;
-
+.app-card:hover{
+  border: none;
 }

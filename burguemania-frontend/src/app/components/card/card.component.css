@@ -1,6 +1,3 @@
-mat-card:hover{
-  border: 2px solid red;
-}
 mat-card {
   width: 500px; /* Ajuste o tamanho conforme necessário */
   height: 500px;
@@ -31,4 +28,20 @@ mat-card::content
   color: #000000;
   font-size: 1.6rem;
   text-align: center;
+}
+
+mat-card.clickable {
+  cursor: pointer;
+}
+
+mat-card.clickable:hover {
+  border: 1px solid #ed1000;
+}
+
+mat-card:not(.clickable) {
+  pointer-events: none;
+}
+
+mat-card:not(.clickable):hover {
+  border: none;
 }

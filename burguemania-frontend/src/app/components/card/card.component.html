@@ -1,5 +1,5 @@
-<mat-card (click)="navigate()">
-  <img mat-card-image [src]="imageSrc" [alt]="imageAlt" />
+<mat-card [class.clickable]="clickable" (click)="navigate()" class="matcard">
+  <img mat-card-image [src]="imageSrc" />
   <mat-card-title>{{ title }}</mat-card-title>
   <mat-card-content>
     <p>{{ content }}</p>

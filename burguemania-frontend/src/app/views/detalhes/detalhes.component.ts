@@ -6,11 +6,12 @@ import { NavbarComponent } from "../../components/navbar/navbar.component";
 import { CardComponent } from "../../components/card/card.component";
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from "../../components/button/button.component";
+import { DescricaoComponent } from "../../components/descricao/descricao.component";
 
 @Component({
   selector: 'app-detalhes',
   standalone: true,
-  imports: [HeaderComponent, NavbarComponent, CardComponent, CommonModule, ButtonComponent],
+  imports: [HeaderComponent, NavbarComponent, CardComponent, CommonModule, ButtonComponent, DescricaoComponent],
   templateUrl: './detalhes.component.html',
   styleUrls: ['./detalhes.component.css']
 })
