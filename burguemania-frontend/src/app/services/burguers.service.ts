@@ -87,4 +87,8 @@ export class BurguersService {
     }
     return undefined;
   }
+
+  getAllBurgers(): BurguerItem[] {
+    return Object.values(this.burguers).flatMap(category => category.items);
+  }
 }

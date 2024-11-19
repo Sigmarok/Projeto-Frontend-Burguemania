@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   standalone: true,
   imports: [MatCardModule],
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
   @Input() imageSrc: string = '';
@@ -18,22 +18,26 @@ export class CardComponent implements OnInit {
 
   currentRoute: string = '';
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    this.activatedRoute.url.subscribe(url => {
+    this.activatedRoute.url.subscribe((url) => {
       this.currentRoute = url.join('/');
       console.log('Current route:', this.currentRoute); // Log para depuração
     });
   }
 
   navigate(): void {
-    if(this.currentRoute === 'categoria/fitness' || this.currentRoute === 'categoria/vegan' || this.currentRoute === 'categoria/infarto') {
+    if (
+      this.currentRoute === 'categoria/fitness' ||
+      this.currentRoute === 'categoria/vegan' ||
+      this.currentRoute === 'categoria/infarto' ||
+      this.currentRoute === 'cardapio-completo'
+    ) {
       this.router.navigate(['detalhes', this.title]);
-  }
-  else{
-    console.log('Navigating to category:', this.category); // Log para depuração
-    this.router.navigate(['/categoria', this.category]);
-  }
+    } else {
+      console.log('Navigating to category:', this.category); // Log para depuração
+      this.router.navigate(['/categoria', this.category]);
+    }
   }
 }

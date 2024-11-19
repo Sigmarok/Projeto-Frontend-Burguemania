@@ -5,13 +5,14 @@ import { HeaderComponent } from "../../components/header/header.component";
 import { NavbarComponent } from "../../components/navbar/navbar.component";
 import { CardComponent } from "../../components/card/card.component";
 import { CommonModule } from '@angular/common';
+import { ButtonComponent } from "../../components/button/button.component";
 
 @Component({
   selector: 'app-categoria',
   standalone: true,
   templateUrl: './categoria.component.html',
   styleUrls: ['./categoria.component.css'],
-  imports: [HeaderComponent, NavbarComponent, CardComponent, CommonModule]
+  imports: [HeaderComponent, NavbarComponent, CardComponent, CommonModule, ButtonComponent]
 })
 export class CategoriaComponent implements OnInit {
   category: string = '';

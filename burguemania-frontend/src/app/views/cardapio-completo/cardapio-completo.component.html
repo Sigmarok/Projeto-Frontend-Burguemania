@@ -1,0 +1,14 @@
+<div class="header-content">
+  <app-header></app-header>
+  <app-navbar></app-navbar>
+</div>
+<div class="titulo"><h1>Cardápio Completo</h1></div>
+<div class="card-container">
+  <div *ngFor="let burger of burgers">
+    <app-card
+      [imageSrc]="'../../../assets/burguer.png'"
+      [title]="burger.name"
+      [content]="burger.ingredients"
+    ></app-card>
+  </div>
+</div>
