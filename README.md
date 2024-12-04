@@ -4,7 +4,7 @@ Este projeto é a construção do frontend de um sistema de gerenciamento de ped
 
 ## Visão Geral
 
-O projeto é desenvolvido usando Angular, angular material e inclui os seguintes componentes principais:
+O projeto é desenvolvido usando Angular com angular material e inclui os seguintes componentes principais:
 - **HeaderComponent**: Cabeçalho do site.
 - **NavbarComponent**: Barra de navegação.
 - **CardComponent**: Componente de cartão para exibir informações dos hambúrgueres.

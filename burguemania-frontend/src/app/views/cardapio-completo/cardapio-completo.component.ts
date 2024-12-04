@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { BurguersService, BurguerItem } from '../../services/burguers.service';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from "../../components/header/header.component";
-import { NavbarComponent } from "../../components/navbar/navbar.component";
-import { CardComponent } from "../../components/card/card.component";
+import { HeaderComponent } from '../../components/header/header.component';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { CardComponent } from '../../components/card/card.component';
 
 @Component({
   selector: 'app-cardapio-completo',
@@ -18,6 +18,15 @@ export class CardapioCompletoComponent implements OnInit {
   constructor(private burguersService: BurguersService) {}
 
   ngOnInit(): void {
-    this.burgers = this.burguersService.getAllBurgers();
+    this.loadBurgers();
+  }
+
+  async loadBurgers(): Promise<void> {
+    try {
+      this.burgers = await this.burguersService.getAllBurgers();
+      console.log('Burgers loaded:', this.burgers); // Log para depuração
+    } catch (error) {
+      console.error('Error loading burgers:', error);
+    }
   }
 }

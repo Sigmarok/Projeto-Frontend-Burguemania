@@ -5,11 +5,19 @@
 <h1>Pedido</h1>
 <div class="container">
   <div class="formulario">
-    <div *ngFor="let input of inputs" class="produtos">
+    <div *ngFor="let input of inputs; let i = index" class="produtos">
       <app-input
-        [label]="input.label"
-        [placeholder]="input.placeholder"
-        [size]="input.size"
+        label="Produto *"
+        placeholder="Digite o produto"
+        size="medium"
+        [(ngModel)]="inputs[i].productName"
+      ></app-input>
+      <app-input
+        label="Quantidade *"
+        placeholder="Digite a quantidade"
+        size="small"
+        type="number"
+        [(ngModel)]="inputs[i].quantity"
       ></app-input>
     </div>
 
@@ -23,8 +31,7 @@
       <textarea cols="100" rows="20"></textarea>
     </div>
     <div class="button-container">
-      <app-button text="Finalizar"></app-button>
+      <app-button text="Finalizar" (click)="submitOrder()"></app-button>
     </div>
   </div>
 </div>
-

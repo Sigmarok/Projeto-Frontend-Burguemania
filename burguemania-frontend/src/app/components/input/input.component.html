@@ -1,4 +1,4 @@
 <label>{{ label }}</label>
 <div class="form" [class.small]="size === 'small'" [class.medium]="size === 'medium'" [class.large]="size === 'large'">
-  <input [type]="type" [placeholder]="placeholder" required>
+  <input [type]="type" [placeholder]="placeholder" [value]="value" (input)="handleInputChange($event)" required>
 </div>

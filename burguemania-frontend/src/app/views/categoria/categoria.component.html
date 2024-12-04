@@ -5,12 +5,13 @@
 
 <h1>{{ category }}</h1>
 <div class="card-container">
-  <div *ngIf="burguers.length > 0; else noItems" class="card-container">
+  <div *ngIf="burguers && burguers.length > 0; else noItems" class="card-container">
     <app-card
       *ngFor="let item of burguers"
-      [imageSrc]="'../../../assets/burguer.png'"
+      [imageSrc]="item.path_Image"
+      [burguerid]="item.id"
       [title]="item.name"
-      [content]="item.ingredients"
+      [content]="item.base_Description"
     ></app-card>
   </div>
   <div class="button-container">

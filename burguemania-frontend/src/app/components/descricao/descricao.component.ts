@@ -13,22 +13,22 @@ import { CommonModule } from '@angular/common';
 })
 export class DescricaoComponent {
 
-  itemName: string = '';
+  itemid: string = '';
   burger: BurguerItem | undefined;
 
   constructor(private route: ActivatedRoute, private burguersService: BurguersService) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      this.itemName = params.get('title') || '';
-      console.log('itemName in detalhes:', this.itemName); // Log para depuração
+      this.itemid = params.get('title') || '';
+      console.log('itemName in detalhes:', this.itemid); // Log para depuração
       this.loadContent();
     });
   }
 
-  loadContent(): void {
-    console.log('Loading content for item:', this.itemName); // Log para depuração
-    this.burger = this.burguersService.getBurgerByName(this.itemName);
+  async loadContent(): Promise<void> {
+    console.log('Loading content for item:', this.itemid); // Log para depuração
+    this.burger = await this.burguersService.getBurgerByID(this.itemid);
     console.log('Burger in detalhes:', this.burger); // Log para depuração
   }
 }

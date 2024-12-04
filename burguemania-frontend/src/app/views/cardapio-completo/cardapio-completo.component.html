@@ -6,9 +6,10 @@
 <div class="card-container">
   <div *ngFor="let burger of burgers">
     <app-card
-      [imageSrc]="'../../../assets/burguer.png'"
+      [imageSrc]="burger.path_Image"
       [title]="burger.name"
-      [content]="burger.ingredients"
+      [content]="burger.base_Description"
+      [id]="burger.id"
     ></app-card>
   </div>
 </div>

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BurguersService } from '../../services/burguers.service';
-import { HeaderComponent } from "../../components/header/header.component";
-import { NavbarComponent } from "../../components/navbar/navbar.component";
-import { CardComponent } from "../../components/card/card.component";
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from "../../components/button/button.component";
+import { HeaderComponent } from '../../components/header/header.component';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { CardComponent } from '../../components/card/card.component';
+import { ButtonComponent } from '../../components/button/button.component';
+import { BurguersService, BurguerItem } from '../../services/burguers.service';
 
 @Component({
   selector: 'app-categoria',
@@ -16,19 +16,24 @@ import { ButtonComponent } from "../../components/button/button.component";
 })
 export class CategoriaComponent implements OnInit {
   category: string = '';
-  burguers: any;
+  burguers: BurguerItem[] = [];
 
-  constructor(private route: ActivatedRoute, private BurguersService: BurguersService) {}
+  constructor(private route: ActivatedRoute, private burguersService: BurguersService) {}
 
   ngOnInit(): void {
-
     this.route.paramMap.subscribe(params => {
       this.category = params.get('category') || '';
       console.log('Category in component:', this.category); // Log para depuração
+      this.loadBurguers();
     });
-    this.burguers = this.BurguersService.burguers[this.category]?.items || [];
-    console.log(this.burguers);
   }
 
-
+  async loadBurguers(): Promise<void> {
+    try {
+      this.burguers = await this.burguersService.getBurguersByCategory(this.category);
+      console.log('Burguers loaded:', this.burguers); // Log para depuração
+    } catch (error) {
+      console.error('Error loading burguers:', error);
+    }
+  }
 }

@@ -6,9 +6,9 @@
 <div *ngIf="burger" class="burguer">
   <div class="burguer-details">
     <app-card
-      [imageSrc]="'../../../assets/burguer.png'"
+      [imageSrc]="burger.path_Image"
       [title]="burger.name"
-      [content]="burger.ingredients"
+      [content]="burger.base_Description"
       [clickable]="false"
     ></app-card>
     <p class="price">Preço: {{ burger.price | currency }}</p>
