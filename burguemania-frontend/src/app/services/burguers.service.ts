@@ -68,9 +68,9 @@ export class BurguersService {
 
   async getBurgerByName(name: string): Promise<BurguerItem | undefined> {
     try {
-      const response = await axios.get<BurguerItem[]>(`${this.apiUrl}/Products?name=${name}`);
+      const response = await axios.get<{ $values: BurguerItem[] }>(`${this.apiUrl}/Products/name/${name}`);
       console.log('API response:', response.data); // Log para depuração
-      return response.data.length > 0 ? response.data[0] : undefined;
+      return response.data.$values.length > 0 ? response.data.$values[0] : undefined;
     } catch (error) {
       console.error('Error fetching burger by name:', error);
       return undefined;

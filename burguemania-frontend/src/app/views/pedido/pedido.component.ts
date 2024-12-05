@@ -40,7 +40,9 @@ export class PedidoComponent {
     let allProductsFound = true;
 
     for (const input of this.inputs) {
+      console.log('Searching for burger:', input.productName); // Log para depuração
       const burger = await this.burguersService.getBurgerByName(input.productName);
+      console.log('Burger found:', burger); // Log para depuração
       if (burger) {
         totalValue += burger.price * input.quantity;
       } else {
